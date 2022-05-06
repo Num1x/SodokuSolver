@@ -17,6 +17,103 @@ def Sodoku9():
             if y == 9:
                 y = 0
                 xy = xy + 1
+def initialLines(line1, line2, line3, line4, surface):
+    widthL = [30, 90, 150, 210]
+    textWidthL = [60, 120, 180, 240]
+    textHeightL = [60, 120, 180, 240]
+    heightL = [30, 90, 150, 210]
+    font = pygame.font.SysFont('Arial', 36, bold=True)
+    color = (255,255,255)
+    black = (0,0,0)
+    red = (136,8,8)
+    x = 0
+    adder = 0
+    cor0 = 0
+    cor1 = 0
+    cor2 = 0
+    cor3 = 0
+    values = [0, 0, 0, 0]
+    for x in range(5):
+        if str(line1[0]).__contains__(str(x)):
+            adder = adder + 1
+            values[0] = x
+        if str(line1[1]).__contains__(str(x)):
+            adder = adder + 1
+            values[1] = x
+        if str(line1[2]).__contains__(str(x)):
+            adder = adder + 1
+            values[2] = x
+        if str(line1[3]).__contains__(str(x)):
+            adder = adder + 1
+            values[3] = x
+        x = x + 1
+    x = 0
+    print(adder)
+    print(values)
+    if adder == 3:
+        for y in range(4):
+            if str(values[x]).__contains__("0"):
+                if "1" not in str(values[0]) and "1" not in str(values[1]) and "1" not in str(values[2]) and "1" not in str(values[3]):
+                    img = font.render("1", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[0]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
+                    img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[0]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
+                    img = font.render("3", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[0]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
+                    img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[0]) - img.get_height()/2)))
+                    pygame.display.flip()
+            x = x + 1
+    x = 0
+    adder = 0
+    cor0 = 0
+    cor1 = 0
+    cor2 = 0
+    cor3 = 0
+    values = [0, 0, 0, 0]
+    for x in range(5):
+        if str(line2[0]).__contains__(str(x)):
+            adder = adder + 1
+            values[0] = x
+        if str(line2[1]).__contains__(str(x)):
+            adder = adder + 1
+            values[1] = x
+        if str(line2[2]).__contains__(str(x)):
+            adder = adder + 1
+            values[2] = x
+        if str(line2[3]).__contains__(str(x)):
+            adder = adder + 1
+            values[3] = x
+        x = x + 1
+    x = 0
+    print(adder)
+    print(values)
+    if adder == 3:
+        for y in range(4):
+            if str(values[x]).__contains__("0"):
+                if "1" not in str(values[0]) and "1" not in str(values[1]) and "1" not in str(values[2]) and "1" not in str(values[3]):
+                    img = font.render("1", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[1]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
+                    img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[1]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
+                    img = font.render("3", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[1]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
+                    img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[1]) - img.get_height()/2)))
+                    pygame.display.flip()
+            x = x + 1
 def Sodoku4():
     print("Please enter the each line of the sodoku. Enter 'b' if the space is blank. After you are done with a specific line press enter.")
     lineF = 0
@@ -102,35 +199,6 @@ def Sodoku4():
             if y == 4:
                 y = 0
                 xy = xy + 1
-    x = 0
-    adder = 0
-    cor0 = 0
-    cor1 = 0
-    cor2 = 0
-    cor3 = 0
-    #img = font.render("2", True, pygame.Color(red), pygame.Color(black))
-    #surface.blit(img, ((textWidthL[1] - img.get_width()/2), ((textHeightL[1]) - img.get_height()/2)))
-    #pygame.display.flip()
-    values = [0, 0, 0, 0]
-    for x in range(4):
-        if str(line1[0]).__contains__(str(x)):
-            adder = adder + 1
-            values[0] = x
-        if str(line1[1]).__contains__(str(x)):
-            adder = adder + 1
-            values[1] = x
-        if str(line1[2]).__contains__(str(x)):
-            adder = adder + 1
-            values[2] = x
-        if str(line1[3]).__contains__(str(x)):
-            adder = adder + 1
-            values[3] = x
-        x = x + 1
-    x = 1
-    if adder == 3:
-        print("debug")
-        if str(values[1]).__contains__("0"):
-            
-                
+    initialLines(line1, line2, line3, line4, surface)
                 
 Sodoku4()
