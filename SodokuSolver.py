@@ -49,7 +49,6 @@ def Sodoku4():
                 print("This line is not valid due to the number of characters, please try again.")
             else:
                 lineF = 1
-        print("\n" + line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n")
         print("Is this the sodoku you wanted to enter? Please enter 'Yes' or 'No'\n")
         confirm = input()
         if confirm == "Yes" or confirm == "yes":
@@ -65,6 +64,7 @@ def Sodoku4():
     surface = pygame.display.set_mode((700,700))
     color = (255,255,255)
     black = (0,0,0)
+    red = (136,8,8)
     font = pygame.font.SysFont('Arial', 36, bold=True)
     widthL = [30, 90, 150, 210]
     textWidthL = [60, 120, 180, 240]
@@ -102,5 +102,35 @@ def Sodoku4():
             if y == 4:
                 y = 0
                 xy = xy + 1
+    x = 0
+    adder = 0
+    cor0 = 0
+    cor1 = 0
+    cor2 = 0
+    cor3 = 0
+    #img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+    #surface.blit(img, ((textWidthL[1] - img.get_width()/2), ((textHeightL[1]) - img.get_height()/2)))
+    #pygame.display.flip()
+    values = [0, 0, 0, 0]
+    for x in range(4):
+        if str(line1[0]).__contains__(str(x)):
+            adder = adder + 1
+            values[0] = x
+        if str(line1[1]).__contains__(str(x)):
+            adder = adder + 1
+            values[1] = x
+        if str(line1[2]).__contains__(str(x)):
+            adder = adder + 1
+            values[2] = x
+        if str(line1[3]).__contains__(str(x)):
+            adder = adder + 1
+            values[3] = x
+        x = x + 1
+    x = 1
+    if adder == 3:
+        print("debug")
+        if str(values[1]).__contains__("0"):
             
+                
+                
 Sodoku4()
