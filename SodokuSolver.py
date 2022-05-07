@@ -17,7 +17,7 @@ def Sodoku9():
             if y == 9:
                 y = 0
                 xy = xy + 1
-def initialLines(line1, line2, line3, line4, surface):
+def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     widthL = [30, 90, 150, 210]
     textWidthL = [60, 120, 180, 240]
     textHeightL = [60, 120, 180, 240]
@@ -57,18 +57,22 @@ def initialLines(line1, line2, line3, line4, surface):
                     img = font.render("1", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[0]) - img.get_height()/2)))
                     pygame.display.flip()
+                    L1[x] = "1"
                 if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
                     img = font.render("2", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[0]) - img.get_height()/2)))
                     pygame.display.flip()
+                    L1[x] = "2"
                 if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
                     img = font.render("3", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[0]) - img.get_height()/2)))
                     pygame.display.flip()
+                    L1[x] = "3"
                 if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
                     img = font.render("4", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[0]) - img.get_height()/2)))
                     pygame.display.flip()
+                    L1[x] = "4"
             x = x + 1
     x = 0
     adder = 0
@@ -101,19 +105,328 @@ def initialLines(line1, line2, line3, line4, surface):
                     img = font.render("1", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[1]) - img.get_height()/2)))
                     pygame.display.flip()
+                    L2[x] = 1
                 if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
                     img = font.render("2", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[1]) - img.get_height()/2)))
                     pygame.display.flip()
+                    L2[x] = 2
                 if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
                     img = font.render("3", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[1]) - img.get_height()/2)))
                     pygame.display.flip()
+                    L2[x] = 3
                 if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
                     img = font.render("4", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[1]) - img.get_height()/2)))
                     pygame.display.flip()
+                    L2[x] = 4
             x = x + 1
+    x = 0
+    adder = 0
+    cor0 = 0
+    cor1 = 0
+    cor2 = 0
+    cor3 = 0
+    values = [0, 0, 0, 0]
+    for x in range(5):
+        if str(line3[0]).__contains__(str(x)):
+            adder = adder + 1
+            values[0] = x
+        if str(line3[1]).__contains__(str(x)):
+            adder = adder + 1
+            values[1] = x
+        if str(line3[2]).__contains__(str(x)):
+            adder = adder + 1
+            values[2] = x
+        if str(line3[3]).__contains__(str(x)):
+            adder = adder + 1
+            values[3] = x
+        x = x + 1
+    x = 0
+    print(adder)
+    print(values)
+    if adder == 3:
+        for y in range(4):
+            if str(values[x]).__contains__("0"):
+                if "1" not in str(values[0]) and "1" not in str(values[1]) and "1" not in str(values[2]) and "1" not in str(values[3]):
+                    img = font.render("1", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[2]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    L3[x] = 1
+                if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
+                    img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[2]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    L3[x] = 2
+                if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
+                    img = font.render("3", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[2]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    L3[x] = 3
+                if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
+                    img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[2]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    L3[x] = 4
+            x = x + 1
+    x = 0
+    adder = 0
+    cor0 = 0
+    cor1 = 0
+    cor2 = 0
+    cor3 = 0
+    values = [0, 0, 0, 0]
+    for x in range(5):
+        if str(line4[0]).__contains__(str(x)):
+            adder = adder + 1
+            values[0] = x
+        if str(line4[1]).__contains__(str(x)):
+            adder = adder + 1
+            values[1] = x
+        if str(line4[2]).__contains__(str(x)):
+            adder = adder + 1
+            values[2] = x
+        if str(line4[3]).__contains__(str(x)):
+            adder = adder + 1
+            values[3] = x
+        x = x + 1
+    x = 0
+    print(adder)
+    print(values)
+    if adder == 3:
+        for y in range(4):
+            if str(values[x]).__contains__("0"):
+                if "1" not in str(values[0]) and "1" not in str(values[1]) and "1" not in str(values[2]) and "1" not in str(values[3]):
+                    img = font.render("1", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[3]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    L4[x] = 1
+                if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
+                    img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[3]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    L4[x] = 2
+                if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
+                    img = font.render("3", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[3]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    L4[x] = 3
+                if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
+                    img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[x] - img.get_width()/2), ((textHeightL[3]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    L4[x] = 4
+            x = x + 1
+    x = 0
+    adder = 0
+    cor0 = 0
+    cor1 = 0
+    cor2 = 0
+    cor3 = 0
+    values = [0, 0, 0, 0]
+    for x in range(5):
+        if str(line1[0]).__contains__(str(x)):
+            adder = adder + 1
+            values[0] = x
+        if str(line2[0]).__contains__(str(x)):
+            adder = adder + 1
+            values[1] = x
+        if str(line3[0]).__contains__(str(x)):
+            adder = adder + 1
+            values[2] = x
+        if str(line4[0]).__contains__(str(x)):
+            adder = adder + 1
+            values[3] = x
+        x = x + 1
+    x = 0
+    print(adder)
+    print(values)
+    if adder == 3:
+        for y in range(4):
+            if str(values[x]).__contains__("0"):
+                if "1" not in str(values[0]) and "1" not in str(values[1]) and "1" not in str(values[2]) and "1" not in str(values[3]):
+                    img = font.render("1", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[0] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[0] = "1"
+                    if int(x) == int("1"):
+                        L2[0] = "1"
+                    if int(x) == int("2"):
+                        L3[0] = "1"
+                    if int(x) == int("3"):
+                        L4[0] = "1"
+                if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
+                    img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[0] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[0] = "2"
+                    if int(x) == int("1"):
+                        L2[0] = "2"
+                    if int(x) == int("2"):
+                        L3[0] = "2"
+                    if int(x) == int("3"):
+                        L4[0] = "2"
+                if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
+                    img = font.render("3", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[0] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[0] = "3"
+                    if int(x) == int("1"):
+                        L2[0] = "3"
+                    if int(x) == int("2"):
+                        L3[0] = "3"
+                    if int(x) == int("3"):
+                        L4[0] = "3"
+                if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
+                    img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[0] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[0] = "4"
+                    if int(x) == int("1"):
+                        L2[0] = "4"
+                    if int(x) == int("2"):
+                        L3[0] = "4"
+                    if int(x) == int("3"):
+                        L4[0] = "4"
+            x = x + 1
+    x = 0
+    adder = 0
+    cor0 = 0
+    cor1 = 0
+    cor2 = 0
+    cor3 = 0
+    values = [0, 0, 0, 0]
+    for x in range(5):
+        if str(line1[1]).__contains__(str(x)):
+            adder = adder + 1
+            values[0] = x
+        if str(line2[1]).__contains__(str(x)):
+            adder = adder + 1
+            values[1] = x
+        if str(line3[1]).__contains__(str(x)):
+            adder = adder + 1
+            values[2] = x
+        if str(line4[1]).__contains__(str(x)):
+            adder = adder + 1
+            values[3] = x
+        x = x + 1
+    x = 0
+    print(adder)
+    print(values)
+    if adder == 3:
+        for y in range(4):
+            if str(values[x]).__contains__("0"):
+                if "1" not in str(values[0]) and "1" not in str(values[1]) and "1" not in str(values[2]) and "1" not in str(values[3]):
+                    img = font.render("1", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[1] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
+                    img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[1] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
+                    img = font.render("3", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[1] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
+                    img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[1] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+            x = x + 1
+    x = 0
+    adder = 0
+    cor0 = 0
+    cor1 = 0
+    cor2 = 0
+    cor3 = 0
+    values = [0, 0, 0, 0]
+    for x in range(5):
+        if str(line1[2]).__contains__(str(x)):
+            adder = adder + 1
+            values[0] = x
+        if str(line2[2]).__contains__(str(x)):
+            adder = adder + 1
+            values[1] = x
+        if str(line3[2]).__contains__(str(x)):
+            adder = adder + 1
+            values[2] = x
+        if str(line4[2]).__contains__(str(x)):
+            adder = adder + 1
+            values[3] = x
+        x = x + 1
+    x = 0
+    print(adder)
+    print(values)
+    if adder == 3:
+        for y in range(4):
+            if str(values[x]).__contains__("0"):
+                if "1" not in str(values[0]) and "1" not in str(values[1]) and "1" not in str(values[2]) and "1" not in str(values[3]):
+                    img = font.render("1", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[2] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
+                    img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[2] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
+                    img = font.render("3", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[2] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
+                    img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[2] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+            x = x + 1
+    x = 0
+    adder = 0
+    cor0 = 0
+    cor1 = 0
+    cor2 = 0
+    cor3 = 0
+    values = [0, 0, 0, 0]
+    for x in range(5):
+        if str(line1[3]).__contains__(str(x)):
+            adder = adder + 1
+            values[0] = x
+        if str(line2[3]).__contains__(str(x)):
+            adder = adder + 1
+            values[1] = x
+        if str(line3[3]).__contains__(str(x)):
+            adder = adder + 1
+            values[2] = x
+        if str(line4[3]).__contains__(str(x)):
+            adder = adder + 1
+            values[3] = x
+        x = x + 1
+    x = 0
+    print(adder)
+    print(values)
+    if adder == 3:
+        for y in range(4):
+            if str(values[x]).__contains__("0"):
+                if "1" not in str(values[0]) and "1" not in str(values[1]) and "1" not in str(values[2]) and "1" not in str(values[3]):
+                    img = font.render("1", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[3] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
+                    img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[3] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
+                    img = font.render("3", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[3] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+                if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
+                    img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                    surface.blit(img, ((textWidthL[3] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
+                    pygame.display.flip()
+            x = x + 1
+    print(L1, L2, L3, L4)
 def Sodoku4():
     print("Please enter the each line of the sodoku. Enter 'b' if the space is blank. After you are done with a specific line press enter.")
     lineF = 0
@@ -199,6 +512,6 @@ def Sodoku4():
             if y == 4:
                 y = 0
                 xy = xy + 1
-    initialLines(line1, line2, line3, line4, surface)
+    initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
                 
 Sodoku4()
