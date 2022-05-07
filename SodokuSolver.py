@@ -325,18 +325,50 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
                     img = font.render("1", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[1] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[1] = "1"
+                    if int(x) == int("1"):
+                        L2[1] = "1"
+                    if int(x) == int("2"):
+                        L3[1] = "1"
+                    if int(x) == int("3"):
+                        L4[1] = "1"
                 if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
                     img = font.render("2", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[1] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[1] = "2"
+                    if int(x) == int("1"):
+                        L2[1] = "2"
+                    if int(x) == int("2"):
+                        L3[1] = "2"
+                    if int(x) == int("3"):
+                        L4[1] = "2"
                 if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
                     img = font.render("3", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[1] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[1] = "3"
+                    if int(x) == int("1"):
+                        L2[1] = "3"
+                    if int(x) == int("2"):
+                        L3[1] = "3"
+                    if int(x) == int("3"):
+                        L4[1] = "3"
                 if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
                     img = font.render("4", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[1] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[1] = "4"
+                    if int(x) == int("1"):
+                        L2[1] = "4"
+                    if int(x) == int("2"):
+                        L3[1] = "4"
+                    if int(x) == int("3"):
+                        L4[1] = "4"
             x = x + 1
     x = 0
     adder = 0
@@ -369,18 +401,50 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
                     img = font.render("1", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[2] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[2] = "1"
+                    if int(x) == int("1"):
+                        L2[2] = "1"
+                    if int(x) == int("2"):
+                        L3[2] = "1"
+                    if int(x) == int("3"):
+                        L4[2] = "1"
                 if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
                     img = font.render("2", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[2] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[2] = "2"
+                    if int(x) == int("1"):
+                        L2[2] = "2"
+                    if int(x) == int("2"):
+                        L3[2] = "2"
+                    if int(x) == int("3"):
+                        L4[2] = "2"
                 if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
                     img = font.render("3", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[2] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[2] = "3"
+                    if int(x) == int("1"):
+                        L2[2] = "3"
+                    if int(x) == int("2"):
+                        L3[2] = "3"
+                    if int(x) == int("3"):
+                        L4[2] = "3"
                 if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
                     img = font.render("4", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[2] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[2] = "4"
+                    if int(x) == int("1"):
+                        L2[2] = "4"
+                    if int(x) == int("2"):
+                        L3[2] = "4"
+                    if int(x) == int("3"):
+                        L4[2] = "4"
             x = x + 1
     x = 0
     adder = 0
@@ -413,20 +477,55 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
                     img = font.render("1", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[3] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[3] = "1"
+                    if int(x) == int("1"):
+                        L2[3] = "1"
+                    if int(x) == int("2"):
+                        L3[3] = "1"
+                    if int(x) == int("3"):
+                        L4[3] = "1"
                 if "2" not in str(values[0]) and "2" not in str(values[1]) and "2" not in str(values[2]) and "2" not in str(values[3]):
                     img = font.render("2", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[3] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[3] = "2"
+                    if int(x) == int("1"):
+                        L2[3] = "2"
+                    if int(x) == int("2"):
+                        L3[3] = "2"
+                    if int(x) == int("3"):
+                        L4[3] = "2"
                 if "3" not in str(values[0]) and "3" not in str(values[1]) and "3" not in str(values[2]) and "3" not in str(values[3]):
                     img = font.render("3", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[3] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[3] = "3"
+                    if int(x) == int("1"):
+                        L2[3] = "3"
+                    if int(x) == int("2"):
+                        L3[3] = "3"
+                    if int(x) == int("3"):
+                        L4[3] = "3"
                 if "4" not in str(values[0]) and "4" not in str(values[1]) and "4" not in str(values[2]) and "4" not in str(values[3]):
                     img = font.render("4", True, pygame.Color(red), pygame.Color(black))
                     surface.blit(img, ((textWidthL[3] - img.get_width()/2), ((textHeightL[x]) - img.get_height()/2)))
                     pygame.display.flip()
+                    if int(x) == int("0"):
+                        L1[3] = "4"
+                    if int(x) == int("1"):
+                        L2[3] = "4"
+                    if int(x) == int("2"):
+                        L3[3] = "4"
+                    if int(x) == int("3"):
+                        L4[3] = "4"
             x = x + 1
-    print(L1, L2, L3, L4)
+    print(L1)
+    print(L2)
+    print(L3)
+    print(L4)
 def Sodoku4():
     print("Please enter the each line of the sodoku. Enter 'b' if the space is blank. After you are done with a specific line press enter.")
     lineF = 0
