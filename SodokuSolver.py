@@ -34,16 +34,16 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     cor3 = 0
     values = [0, 0, 0, 0]
     for x in range(5):
-        if str(line1[0]).__contains__(str(x)):
+        if str(L1[0]).__contains__(str(x)):
             adder = adder + 1
             values[0] = x
-        if str(line1[1]).__contains__(str(x)):
+        if str(L1[1]).__contains__(str(x)):
             adder = adder + 1
             values[1] = x
-        if str(line1[2]).__contains__(str(x)):
+        if str(L1[2]).__contains__(str(x)):
             adder = adder + 1
             values[2] = x
-        if str(line1[3]).__contains__(str(x)):
+        if str(L1[3]).__contains__(str(x)):
             adder = adder + 1
             values[3] = x
         x = x + 1
@@ -82,16 +82,16 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     cor3 = 0
     values = [0, 0, 0, 0]
     for x in range(5):
-        if str(line2[0]).__contains__(str(x)):
+        if str(L2[0]).__contains__(str(x)):
             adder = adder + 1
             values[0] = x
-        if str(line2[1]).__contains__(str(x)):
+        if str(L2[1]).__contains__(str(x)):
             adder = adder + 1
             values[1] = x
-        if str(line2[2]).__contains__(str(x)):
+        if str(L2[2]).__contains__(str(x)):
             adder = adder + 1
             values[2] = x
-        if str(line2[3]).__contains__(str(x)):
+        if str(L2[3]).__contains__(str(x)):
             adder = adder + 1
             values[3] = x
         x = x + 1
@@ -130,16 +130,16 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     cor3 = 0
     values = [0, 0, 0, 0]
     for x in range(5):
-        if str(line3[0]).__contains__(str(x)):
+        if str(L3[0]).__contains__(str(x)):
             adder = adder + 1
             values[0] = x
-        if str(line3[1]).__contains__(str(x)):
+        if str(L3[1]).__contains__(str(x)):
             adder = adder + 1
             values[1] = x
-        if str(line3[2]).__contains__(str(x)):
+        if str(L3[2]).__contains__(str(x)):
             adder = adder + 1
             values[2] = x
-        if str(line3[3]).__contains__(str(x)):
+        if str(L3[3]).__contains__(str(x)):
             adder = adder + 1
             values[3] = x
         x = x + 1
@@ -178,16 +178,16 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     cor3 = 0
     values = [0, 0, 0, 0]
     for x in range(5):
-        if str(line4[0]).__contains__(str(x)):
+        if str(L4[0]).__contains__(str(x)):
             adder = adder + 1
             values[0] = x
-        if str(line4[1]).__contains__(str(x)):
+        if str(L4[1]).__contains__(str(x)):
             adder = adder + 1
             values[1] = x
-        if str(line4[2]).__contains__(str(x)):
+        if str(L4[2]).__contains__(str(x)):
             adder = adder + 1
             values[2] = x
-        if str(line4[3]).__contains__(str(x)):
+        if str(L4[3]).__contains__(str(x)):
             adder = adder + 1
             values[3] = x
         x = x + 1
@@ -226,16 +226,16 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     cor3 = 0
     values = [0, 0, 0, 0]
     for x in range(5):
-        if str(line1[0]).__contains__(str(x)):
+        if str(L1[0]).__contains__(str(x)):
             adder = adder + 1
             values[0] = x
-        if str(line2[0]).__contains__(str(x)):
+        if str(L2[0]).__contains__(str(x)):
             adder = adder + 1
             values[1] = x
-        if str(line3[0]).__contains__(str(x)):
+        if str(L3[0]).__contains__(str(x)):
             adder = adder + 1
             values[2] = x
-        if str(line4[0]).__contains__(str(x)):
+        if str(L4[0]).__contains__(str(x)):
             adder = adder + 1
             values[3] = x
         x = x + 1
@@ -302,16 +302,16 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     cor3 = 0
     values = [0, 0, 0, 0]
     for x in range(5):
-        if str(line1[1]).__contains__(str(x)):
+        if str(L1[1]).__contains__(str(x)):
             adder = adder + 1
             values[0] = x
-        if str(line2[1]).__contains__(str(x)):
+        if str(L2[1]).__contains__(str(x)):
             adder = adder + 1
             values[1] = x
-        if str(line3[1]).__contains__(str(x)):
+        if str(L3[1]).__contains__(str(x)):
             adder = adder + 1
             values[2] = x
-        if str(line4[1]).__contains__(str(x)):
+        if str(L4[1]).__contains__(str(x)):
             adder = adder + 1
             values[3] = x
         x = x + 1
@@ -378,16 +378,16 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     cor3 = 0
     values = [0, 0, 0, 0]
     for x in range(5):
-        if str(line1[2]).__contains__(str(x)):
+        if str(L1[2]).__contains__(str(x)):
             adder = adder + 1
             values[0] = x
-        if str(line2[2]).__contains__(str(x)):
+        if str(L2[2]).__contains__(str(x)):
             adder = adder + 1
             values[1] = x
-        if str(line3[2]).__contains__(str(x)):
+        if str(L3[2]).__contains__(str(x)):
             adder = adder + 1
             values[2] = x
-        if str(line4[2]).__contains__(str(x)):
+        if str(L4[2]).__contains__(str(x)):
             adder = adder + 1
             values[3] = x
         x = x + 1
@@ -454,16 +454,16 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     cor3 = 0
     values = [0, 0, 0, 0]
     for x in range(5):
-        if str(line1[3]).__contains__(str(x)):
+        if str(L1[3]).__contains__(str(x)):
             adder = adder + 1
             values[0] = x
-        if str(line2[3]).__contains__(str(x)):
+        if str(L2[3]).__contains__(str(x)):
             adder = adder + 1
             values[1] = x
-        if str(line3[3]).__contains__(str(x)):
+        if str(L3[3]).__contains__(str(x)):
             adder = adder + 1
             values[2] = x
-        if str(line4[3]).__contains__(str(x)):
+        if str(L4[3]).__contains__(str(x)):
             adder = adder + 1
             values[3] = x
         x = x + 1
@@ -526,6 +526,18 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     print(L2)
     print(L3)
     print(L4)
+    print("Initial lines complete")
+def brute(surface, L1, L2, L3, L4, red, widthL, heightL):
+    for x in range(4):
+        if L1[x] == "b":
+            print("(1, " + str(x) + ") is blank.")
+            pygame.draw.rect(surface, red, pygame.Rect(widthL[x], heightL[0], 60, 60),  2)
+        if L2[x] == "b":
+            print("(2, " + str(x) + ") is blank.")
+        if L3[x] == "b":
+            print("(3, " + str(x) + ") is blank.")
+        if L4[x] == "b":
+            print("(4, " + str(x) + ") is blank.")
 def Sodoku4():
     print("Please enter the each line of the sodoku. Enter 'b' if the space is blank. After you are done with a specific line press enter.")
     lineF = 0
@@ -612,5 +624,7 @@ def Sodoku4():
                 y = 0
                 xy = xy + 1
     initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
+    initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
+    brute(surface, L1, L2, L3, L4, red, widthL, heightL)
                 
 Sodoku4()
