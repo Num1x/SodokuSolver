@@ -528,16 +528,33 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     print(L4)
     print("Initial lines complete")
 def brute(surface, L1, L2, L3, L4, red, widthL, heightL):
+    L1blanks = [0, 0, 0, 0]
+    L2blanks = [0, 0, 0, 0]
+    L3blanks = [0, 0, 0, 0]
+    L4blanks = [0, 0, 0, 0]
     for x in range(4):
         if L1[x] == "b":
             print("(1, " + str(x) + ") is blank.")
             pygame.draw.rect(surface, red, pygame.Rect(widthL[x], heightL[0], 60, 60),  2)
+            L1blanks[x] = 1
         if L2[x] == "b":
             print("(2, " + str(x) + ") is blank.")
+            pygame.draw.rect(surface, red, pygame.Rect(widthL[x], heightL[1], 60, 60),  2)
+            L2blanks[x] = 1
         if L3[x] == "b":
             print("(3, " + str(x) + ") is blank.")
+            pygame.draw.rect(surface, red, pygame.Rect(widthL[x], heightL[2], 60, 60),  2)
+            L3blanks[x] = 1
         if L4[x] == "b":
             print("(4, " + str(x) + ") is blank.")
+            pygame.draw.rect(surface, red, pygame.Rect(widthL[x], heightL[3], 60, 60),  2)
+            L4blanks[x] = 1
+        pygame.display.flip()
+        print()
+        print(L1blanks)
+        print(L2blanks)
+        print(L3blanks)
+        print(L4blanks)
 def Sodoku4():
     print("Please enter the each line of the sodoku. Enter 'b' if the space is blank. After you are done with a specific line press enter.")
     lineF = 0
