@@ -527,7 +527,7 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     print(L3)
     print(L4)
     print("Initial lines complete")
-def brute(surface, L1, L2, L3, L4, red, widthL, heightL):
+def brute(surface, L1, L2, L3, L4, red, widthL, heightL, font, color, black, textWidthL, textHeightL):
     L1blanks = [0, 0, 0, 0]
     L2blanks = [0, 0, 0, 0]
     L3blanks = [0, 0, 0, 0]
@@ -550,11 +550,60 @@ def brute(surface, L1, L2, L3, L4, red, widthL, heightL):
             pygame.draw.rect(surface, red, pygame.Rect(widthL[x], heightL[3], 60, 60),  2)
             L4blanks[x] = 1
         pygame.display.flip()
-        print()
+        print("\n" + "blanks" + "\n")
         print(L1blanks)
         print(L2blanks)
         print(L3blanks)
         print(L4blanks)
+        print("\n" + "fulls" + "\n")
+        print(L1)
+        print(L2)
+        print(L3)
+        print(L4)
+        print()
+        Q1 = [L1[0], L1[1], L2[0], L2[1]]
+        print("Q1" + str(Q1))
+        Q2 = [L1[2], L1[3], L2[2], L2[3]]
+        print("Q2" + str(Q2))
+        Q3 = [L3[0], L3[1], L4[0], L4[1]]
+        print("Q3" + str(Q3))
+        Q4 = [L3[2], L3[3], L4[2], L4[3]]
+        print("Q4" + str(Q4))
+        x = 0
+        for x in range(4):
+            if str(L1blanks[x]) == "1":
+                if str(x) > "1":
+                    print("(1, " + str(x) + ") is in quadrant 2")
+                else:
+                    print("(1, " + str(x) + ") is in quadrant 1")
+            if str(L2blanks[x]) == "1":
+                if str(x) > "1":
+                    print("(2, " + str(x) + ") is in quadrant 2")
+                else:
+                    print("(2, " + str(x) + ") is in quadrant 1")
+            if str(L3blanks[x]) == "1":
+                if str(x) > "1":
+                    print("(3, " + str(x) + ") is in quadrant 2")
+                else:
+                    print("(3, " + str(x) + ") is in quadrant 1")
+            if str(L4blanks[x]) == "1":
+                if str(x) > "1":
+                    print("(4, " + str(x) + ") is in quadrant 2")
+                else:
+                    print("(4, " + str(x) + ") is in quadrant 1")
+        if str(Q1).__contains__("b"):
+            if str(Q1).__contains__("1") and str(Q1).__contains__("2") and str(Q1).__contains__("3"):
+                for x in range(4):
+                    if str(Q1[x]).__contains__("b"):
+                        Q1[x] = "4"
+                        if str(x) > "1":
+                            height = 1
+                        if str(x) == "0" or str(x) == "2":
+                            width = 0
+                        if str(x) == "1" or str(x) == "3":
+                            width = 1
+                        img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
 def Sodoku4():
     print("Please enter the each line of the sodoku. Enter 'b' if the space is blank. After you are done with a specific line press enter.")
     lineF = 0
@@ -642,6 +691,6 @@ def Sodoku4():
                 xy = xy + 1
     initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
     initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
-    brute(surface, L1, L2, L3, L4, red, widthL, heightL)
+    brute(surface, L1, L2, L3, L4, red, widthL, heightL, font, color, black, textWidthL, textHeightL)
                 
 Sodoku4()
