@@ -605,10 +605,13 @@ def brute(surface, L1, L2, L3, L4, red, widthL, heightL, font, color, black, tex
                         img = font.render("4", True, pygame.Color(red), pygame.Color(black))
                         surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
 def Sodoku4():
-    print("Please enter the each line of the sodoku. Enter 'b' if the space is blank. After you are done with a specific line press enter.")
+    false = ""
     lineF = 0
     confirmed = 0
     while confirmed == 0:
+        print("Please enter the each line of the sodoku. Enter 'b' if the space is blank. After you are done with a specific line press enter.")
+        print("type any character and press enter before entering your lines.")
+        false = input()
         while lineF != 1:
             line1 = input()
             if len(str(line1)) != 4:
