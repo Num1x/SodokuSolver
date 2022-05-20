@@ -598,11 +598,169 @@ def brute(surface, L1, L2, L3, L4, red, widthL, heightL, font, color, black, tex
                         Q1[x] = "4"
                         if str(x) > "1":
                             height = 1
+                        else:
+                            height = 0
                         if str(x) == "0" or str(x) == "2":
                             width = 0
                         if str(x) == "1" or str(x) == "3":
                             width = 1
                         img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
+            if str(Q1).__contains__("1") and str(Q1).__contains__("2") and str(Q1).__contains__("4"):
+                for x in range(4):
+                    if str(Q1[x]).__contains__("b"):
+                        Q1[x] = "3"
+                        if str(x) > "1":
+                            height = 1
+                        else:
+                            height = 0
+                        if str(x) == "0" or str(x) == "2":
+                            width = 0
+                        if str(x) == "1" or str(x) == "3":
+                            width = 1
+                        img = font.render("3", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
+            if str(Q1).__contains__("1") and str(Q1).__contains__("3") and str(Q1).__contains__("4"):
+                for x in range(4):
+                    if str(Q1[x]).__contains__("b"):
+                        Q1[x] = "2"
+                        if str(x) > "1":
+                            height = 1
+                        else:
+                            height = 0
+                        if str(x) == "0" or str(x) == "2":
+                            width = 0
+                        if str(x) == "1" or str(x) == "3":
+                            width = 1
+                        img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
+            if str(Q1).__contains__("2") and str(Q1).__contains__("3") and str(Q1).__contains__("4"):
+                for x in range(4):
+                    if str(Q1[x]).__contains__("b"):
+                        Q1[x] = "1"
+                        if str(x) > "1":
+                            height = 1
+                        else:
+                            height = 0
+                        if str(x) == "0" or str(x) == "2":
+                            width = 0
+                        if str(x) == "1" or str(x) == "3":
+                            width = 1
+                        img = font.render("1", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
+        if str(Q2).__contains__("b"):
+            if str(Q2).__contains__("1") and str(Q2).__contains__("2") and str(Q2).__contains__("3"):
+                for x in range(4):
+                    if str(Q2[x]).__contains__("b"):
+                        Q2[x] = "4"
+                        if str(x) > "1":
+                            height = 1
+                        else:
+                            height = 0
+                        if str(x) == "0" or str(x) == "2":
+                            width = 2
+                        if str(x) == "1" or str(x) == "3":
+                            width = 3
+                        img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
+            if str(Q2).__contains__("1") and str(Q2).__contains__("2") and str(Q2).__contains__("4"):
+                for x in range(4):
+                    if str(Q2[x]).__contains__("b"):
+                        Q2[x] = "3"
+                        if str(x) > "1":
+                            height = 1
+                        else:
+                            height = 0
+                        if str(x) == "0" or str(x) == "2":
+                            width = 2
+                        if str(x) == "1" or str(x) == "3":
+                            width = 3
+                        img = font.render("3", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
+            if str(Q2).__contains__("1") and str(Q2).__contains__("3") and str(Q2).__contains__("4"):
+                for x in range(4):
+                    if str(Q2[x]).__contains__("b"):
+                        Q2[x] = "2"
+                        if str(x) > "1":
+                            height = 1
+                        else:
+                            height = 0
+                        if str(x) == "0" or str(x) == "2":
+                            width = 2
+                        if str(x) == "1" or str(x) == "3":
+                            width = 3
+                        img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
+            if str(Q2).__contains__("2") and str(Q2).__contains__("3") and str(Q2).__contains__("4"):
+                for x in range(4):
+                    if str(Q2[x]).__contains__("b"):
+                        Q2[x] = "1"
+                        if str(x) > "1":
+                            height = 1
+                        else:
+                            height = 0
+                        if str(x) == "0" or str(x) == "2":
+                            width = 2
+                        if str(x) == "1" or str(x) == "3":
+                            width = 3
+                        img = font.render("1", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
+        if str(Q3).__contains__("b"):
+            if str(Q3).__contains__("1") and str(Q3).__contains__("2") and str(Q3).__contains__("3"):
+                for x in range(4):
+                    if str(Q3[x]).__contains__("b"):
+                        Q3[x] = "4"
+                        if str(x) > "1":
+                            height = 3
+                        else:
+                            height = 2
+                        if str(x) == "0" or str(x) == "2":
+                            width = 0
+                        if str(x) == "1" or str(x) == "3":
+                            width = 1
+                        img = font.render("4", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
+            if str(Q3).__contains__("1") and str(Q3).__contains__("2") and str(Q3).__contains__("4"):
+                for x in range(4):
+                    if str(Q3[x]).__contains__("b"):
+                        Q3[x] = "3"
+                        if str(x) > "1":
+                            height = 3
+                        else:
+                            height = 2
+                        if str(x) == "0" or str(x) == "2":
+                            width = 0
+                        if str(x) == "1" or str(x) == "3":
+                            width = 1
+                        img = font.render("3", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
+            if str(Q3).__contains__("1") and str(Q3).__contains__("3") and str(Q3).__contains__("4"):
+                for x in range(4):
+                    if str(Q3[x]).__contains__("b"):
+                        Q3[x] = "2"
+                        if str(x) > "1":
+                            height = 3
+                        else:
+                            height = 2
+                        if str(x) == "0" or str(x) == "2":
+                            width = 0
+                        if str(x) == "1" or str(x) == "3":
+                            width = 1
+                        img = font.render("2", True, pygame.Color(red), pygame.Color(black))
+                        surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
+            if str(Q3).__contains__("2") and str(Q3).__contains__("3") and str(Q3).__contains__("4"):
+                for x in range(4):
+                    if str(Q3[x]).__contains__("b"):
+                        Q3[x] = "1"
+                        if str(x) > "1":
+                            height = 3
+                        else:
+                            height = 2
+                        if str(x) == "0" or str(x) == "2":
+                            width = 0
+                        if str(x) == "1" or str(x) == "3":
+                            width = 1
+                        img = font.render("1", True, pygame.Color(red), pygame.Color(black))
                         surface.blit(img, ((textWidthL[width] - img.get_width()/2), ((textHeightL[height]) - img.get_height()/2)))
 def Sodoku4():
     false = ""
@@ -610,8 +768,10 @@ def Sodoku4():
     confirmed = 0
     while confirmed == 0:
         print("Please enter the each line of the sodoku. Enter 'b' if the space is blank. After you are done with a specific line press enter.")
-        print("type any character and press enter before entering your lines.")
-        false = input()
+        line1 = "0"
+        line2 = "0"
+        line3 = "0"
+        line4 = "0"
         while lineF != 1:
             line1 = input()
             if len(str(line1)) != 4:
@@ -695,5 +855,11 @@ def Sodoku4():
     initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
     initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
     brute(surface, L1, L2, L3, L4, red, widthL, heightL, font, color, black, textWidthL, textHeightL)
-                
+    initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
+    initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
+    brute(surface, L1, L2, L3, L4, red, widthL, heightL, font, color, black, textWidthL, textHeightL)
+    initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
+    initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
+    brute(surface, L1, L2, L3, L4, red, widthL, heightL, font, color, black, textWidthL, textHeightL)
+
 Sodoku4()
