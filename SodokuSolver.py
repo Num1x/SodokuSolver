@@ -1,7 +1,15 @@
 import pygame
 import time
 
+def arrayChoice():
+    print("4x4 or 9x9?")
+    choice = input()
+    if choice == "4x4":
+        Sodoku4()
+    if choice == "9x9":
+        Sodoku9()
 def Sodoku9():
+    #Instead of using the same line based solution like in the 4x4 I will be using a 3x3 solution. (ie: Q1, Q2, Q3, Q4, etc..)
     pygame.init()
     surface = pygame.display.set_mode((700,700))
     color = (255,255,255)
@@ -17,7 +25,17 @@ def Sodoku9():
             if y == 9:
                 y = 0
                 xy = xy + 1
-def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
+    L1completed = 0
+    while L1completed == 0:
+        print("Please type nine lines of numbers with the letter b representing blank spaces.")
+        L1 = input()
+        if len(str(L1)) == 9:
+            L1completed = 1
+            #This is where is should assign numbers to the quadrants for only line one numbers.
+        else:
+            print("Line 1 is not valid. Please try again.")
+    
+def initialLines4(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     widthL = [30, 90, 150, 210]
     textWidthL = [60, 120, 180, 240]
     textHeightL = [60, 120, 180, 240]
@@ -527,7 +545,7 @@ def initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     print(L3)
     print(L4)
     print("Initial lines complete")
-def brute(surface, L1, L2, L3, L4, red, widthL, heightL, font, color, black, textWidthL, textHeightL):
+def brute4(surface, L1, L2, L3, L4, red, widthL, heightL, font, color, black, textWidthL, textHeightL):
     L1blanks = [0, 0, 0, 0]
     L2blanks = [0, 0, 0, 0]
     L3blanks = [0, 0, 0, 0]
@@ -944,9 +962,9 @@ def Sodoku4():
                 y = 0
                 xy = xy + 1
     for x in range(5):
-        initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
-        initialLines(line1, line2, line3, line4, surface, L1, L2, L3, L4)
-        brute(surface, L1, L2, L3, L4, red, widthL, heightL, font, color, black, textWidthL, textHeightL)
+        initialLines4(line1, line2, line3, line4, surface, L1, L2, L3, L4)
+        initialLines4(line1, line2, line3, line4, surface, L1, L2, L3, L4)
+        brute4(surface, L1, L2, L3, L4, red, widthL, heightL, font, color, black, textWidthL, textHeightL)
         y = 0
     xy = 0
     for x in range(4):
@@ -964,4 +982,4 @@ def Sodoku4():
         print("\n" + "The puzzle has been completed.")
     else:
         print("\n" + "The puzzle was not able to be completed")
-Sodoku4()
+arrayChoice()
