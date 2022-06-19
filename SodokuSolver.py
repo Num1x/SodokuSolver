@@ -17,6 +17,15 @@ def Sodoku9():
     heightL = [30, 90, 150, 210, 270, 330, 390, 450, 510]
     y = 0
     xy = 0
+    Quad1 = ["b", "b", "b", "b", "b", "b", "b", "b", "b"]
+    Quad2 = ["b", "b", "b", "b", "b", "b", "b", "b", "b"]
+    Quad3 = ["b", "b", "b", "b", "b", "b", "b", "b", "b"]
+    Quad4 = ["b", "b", "b", "b", "b", "b", "b", "b", "b"]
+    Quad5 = ["b", "b", "b", "b", "b", "b", "b", "b", "b"]
+    Quad6 = ["b", "b", "b", "b", "b", "b", "b", "b", "b"]
+    Quad7 = ["b", "b", "b", "b", "b", "b", "b", "b", "b"]
+    Quad8 = ["b", "b", "b", "b", "b", "b", "b", "b", "b"]
+    Quad9 = ["b", "b", "b", "b", "b", "b", "b", "b", "b"]
     for x in range(9):
         for x in range(9):
             pygame.draw.rect(surface, color, pygame.Rect(widthL[y], heightL[xy], 60, 60),  2)
@@ -26,14 +35,71 @@ def Sodoku9():
                 y = 0
                 xy = xy + 1
     L1completed = 0
+    L2completed = 0
+    L3completed = 0
+    L4completed = 0
+    L5completed = 0
+    L6completed = 0
+    L7completed = 0
+    L8completed = 0
+    L9completed = 0
     while L1completed == 0:
         print("Please type nine lines of numbers with the letter b representing blank spaces.")
         L1 = input()
         if len(str(L1)) == 9:
             L1completed = 1
-            #This is where is should assign numbers to the quadrants for only line one numbers.
         else:
             print("Line 1 is not valid. Please try again.")
+    while L2completed == 0:
+        L2 = input()
+        if len(str(L2)) == 9:
+            L2completed = 1
+        else:
+            print("Line 2 is not valid. Please try again.")
+    while L3completed == 0:
+        L3 = input()
+        if len(str(L3)) == 9:
+            L3completed = 1
+        else:
+            print("Line 3 is not valid. Please try again.")
+    while L4completed == 0:
+        L4 = input()
+        if len(str(L4)) == 9:
+            L4completed = 1
+        else:
+            print("Line 4 is not valid. Please try again.")
+    while L5completed == 0:
+        L5 = input()
+        if len(str(L5)) == 9:
+            L5ompleted = 1
+        else:
+            print("Line 5 is not valid. Please try again.")
+    while L6completed == 0:
+        L6 = input()
+        if len(str(L6)) == 9:
+            L6ompleted = 1
+        else:
+            print("Line 6 is not valid. Please try again.")
+    while L7completed == 0:
+        L7 = input()
+        if len(str(L7)) == 9:
+            L7completed = 1
+        else:
+            print("Line 7 is not valid. Please try again.")
+    while L8completed == 0:
+        L8 = input()
+        if len(str(L8)) == 9:
+            L8ompleted = 1
+        else:
+            print("Line 8 is not valid. Please try again.")
+    while L9completed == 0:
+        L9 = input()
+        if len(str(L9)) == 9:
+            L9ompleted = 1
+        else:
+            print("Line 9 is not valid. Please try again.")
+    Quad1 = [L1[0], L1[1], L1[2], L2[0], L2[1], L2[2], L3[0], L3[1], L3[2]]
+    #assign all quadrant values
     
 def initialLines4(line1, line2, line3, line4, surface, L1, L2, L3, L4):
     widthL = [30, 90, 150, 210]
